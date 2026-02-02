@@ -1,0 +1,21 @@
+{
+  "validUser": {
+    "email": "demo@demo.com",
+    "password": "demo"
+  },
+  "invalidPass": {
+    "password": "Solotesting"
+  },
+  "invalidEmail":{
+    "email": "ghostGhostgmail.com"
+  
+  },
+  "unregisteredUser": {
+    "email": "soltesting@me.com",
+    "password": "08373"
+  },
+  "invalidEmailFormat": {
+    "email": "ghostGhostgmail.com",
+    "password": "demo"
+  }
+}
