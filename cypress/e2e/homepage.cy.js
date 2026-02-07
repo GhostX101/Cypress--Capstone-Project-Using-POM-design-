@@ -10,7 +10,7 @@ describe('HOMEPAGE FUNCTIONALITY', () => {
     cy.url().should('include', 'shop.qaautomationlabs.com');
   });
 
-  it('verifies logo is visible on homepage', () => {
+  it('verify logo is visible on homepage', () => {
     Home.logo();
     });
 
@@ -102,11 +102,87 @@ it('verify AboutPage load to the correct page', ()=>{
             Login.clickLogin();
             Home.shopPage();
             
-            
-           
+                    
             
        })
     })
 
-    
+
+    it('verify testing page Redirect to the correct page', ()=>{    
+          cy.fixture('loginData.json').then((data) => {
+            Login.setEmail(data.validUser.email);
+            Login.setPassword(data.validUser.password);
+            Login.clickLogin();
+            Home.testingPage();
+            cy.url().should('include', 'testing');
+            
+                 
+            
+       })
+    })
+
+
+it('verify BlogPage Redirect to the correct page', ()=>{
+cy.fixture('loginData.json').then((data) => {
+            Login.setEmail(data.validUser.email);
+            Login.setPassword(data.validUser.password);
+            Login.clickLogin();
+            Home.blogPage();
+            cy.url().should('include', 'blog');  
+            cy.title().should('include', 'Blog');   
+            
+       })
+
 })
+
+
+it('verify ContactPage Redirect to the correct page', ()=>{
+cy.fixture('loginData.json').then((data) => {
+            Login.setEmail(data.validUser.email);
+            Login.setPassword(data.validUser.password);
+            Login.clickLogin();
+            Home.ContactPage();
+            cy.url().should('include', 'contact');  
+            cy.title().should('include', 'Contact');   
+            
+       })
+
+})
+
+
+it('verify user can access the contact information from the contact page', ()=>{
+cy.fixture('loginData.json').then((data) => {
+            Login.setEmail(data.validUser.email);
+            Login.setPassword(data.validUser.password);
+            Login.clickLogin();
+            Home.Info();
+               
+            
+       })
+
+})   
+
+
+it('verify the products on homepage are visible', ()=> {
+  cy.fixture('loginData.json').then((data) => {
+            Login.setEmail(data.validUser.email);
+            Login.setPassword(data.validUser.password);
+            Login.clickLogin();
+            Home.Offer();
+            
+               
+            
+       })
+  });   
+
+
+  it('verify footer elements are visible', ()=> {
+  cy.fixture('loginData.json').then((data) => {
+            Login.setEmail(data.validUser.email);
+            Login.setPassword(data.validUser.password);
+            Login.clickLogin();
+            Home.Footer();  
+
+})
+  })
+  })

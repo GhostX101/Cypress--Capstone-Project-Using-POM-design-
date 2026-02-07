@@ -1,0 +1,20 @@
+{
+  "name": "qaautomationlabs",
+  "version": "1.0.0",
+  "description": "Cypress automation testing project",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "test:open": "cypress open"
+  },
+  "keywords": [
+    "cypress",
+    "automation",
+    "testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.0.0"
+  }
+}

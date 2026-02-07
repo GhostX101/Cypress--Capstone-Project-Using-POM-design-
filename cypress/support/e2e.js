@@ -14,10 +14,21 @@
 // ***********************************************************
 
 Cypress.on('uncaught:exception', (err, runnable) => {
+  // Ignore owlCarousel errors from vendor JS
   if (err.message.includes('owlCarousel is not a function')) {
     return false;
   }
+  
+  // Ignore cross-origin script errors (from third-party CDN/vendor JS)
+  if (err.message.includes('Script error')) {
+    return false;
+  }
+  
+  // Let other errors fail the test
+  return true;
 });
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+
