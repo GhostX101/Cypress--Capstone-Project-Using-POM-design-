@@ -15,9 +15,7 @@ describe('verifying Login fucntionality', () => {
             Login.clickLogin();
             
         })
-
   
-
     })
 
     it('verifying login with Invalid Password', ()=>{
@@ -30,7 +28,6 @@ describe('verifying Login fucntionality', () => {
             })
 
         })
-
 
 
     it('Verifying Login with wrong Email and valid password',()=>{
