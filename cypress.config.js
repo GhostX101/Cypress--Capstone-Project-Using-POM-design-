@@ -1,11 +1,15 @@
 const { defineConfig } = require("cypress");
+const {allureCypress} = require("allure-cypress/reporter");
 
 module.exports = defineConfig({
   e2e: {
-    // baseUrl: "https://shop.qaautomationlabs.com/index.php",
-    watchForFileChanges: true,
+    watchForFileChanges: false,
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      allureCypress(on, config, {
+        resultsDir: "Cypress/reports",
+      });
+      return config;
     },
   },
-});
+}
+);
