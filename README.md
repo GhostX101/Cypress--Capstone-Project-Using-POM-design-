@@ -145,9 +145,9 @@ Tests run automatically via **GitHub Actions** on every push, defined in `.githu
 Each page of the application (Home, Login, Shopping/Category) is represented as its own class in `cypress/pages/`, encapsulating that page's selectors and interactions. Test specs then call clean, readable methods instead of raw selector chains.
 
 **Benefits:**
-- 🔁 **Reusability** — shared interactions used across multiple specs
-- 🛠️ **Maintainability** — a UI change only requires updating one page object, not every test
-- 📖 **Readability** — tests read like plain-language steps
+- 🔁 **Reusability**: shared interactions used across multiple specs
+- 🛠️ **Maintainability**: a UI change only requires updating one page object, not every test
+- 📖 **Readability**: tests read like plain language steps
 
 ---
 
