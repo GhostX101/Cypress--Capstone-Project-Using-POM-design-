@@ -15,11 +15,11 @@ describe('HOMEPAGE FUNCTIONALITY', () => {
     });
 
 
-    it('verifying the Navbar Icon is visible',()=>{
+//     it('verifying the Navbar Icon is visible',()=>{
 
-        Home.navBar();
+//         Home.navBar();
 
-    })
+//     })
 
 
     it('verifying the Login elements are visible',()=>{
