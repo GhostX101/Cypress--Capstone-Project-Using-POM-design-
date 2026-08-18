@@ -163,4 +163,5 @@ Each page of the application (Home, Login, Shopping/Category) is represented as 
 ## 👤 Author
 
 **GhostX101**
-Capstone Project — Cypress Test Automation with Page Object Model
+Capstone Project 
+Cypress Test Automation with Page Object Model
